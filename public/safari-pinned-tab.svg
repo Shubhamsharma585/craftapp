@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background Circle -->
+  <circle cx="256" cy="256" r="256" fill="#2c3e50"/>
+  
+  <!-- Craft Symbol - Stylized C -->
+  <path d="M 346 156
+           A 120 120 0 0 0 256 96
+           A 120 120 0 0 0 166 156
+           A 40 40 0 0 0 166 216
+           A 40 40 0 0 0 226 216
+           A 40 40 0 0 1 286 216
+           A 40 40 0 0 1 346 216
+           A 40 40 0 0 0 346 156
+           Z" 
+        fill="#3498db"/>
+  
+  <!-- Bottom Design Element -->
+  <path d="M 166 296
+           A 40 40 0 0 0 166 356
+           A 120 120 0 0 0 256 416
+           A 120 120 0 0 0 346 356
+           A 40 40 0 0 0 346 296
+           A 40 40 0 0 1 286 296
+           A 40 40 0 0 0 226 296
+           A 40 40 0 0 1 166 296
+           Z" 
+        fill="#3498db"/>
+</svg> 
