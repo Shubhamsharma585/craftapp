@@ -6,8 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Home from './Home';
 import ProductGrid from './components/Products/ProductGrid';
-
-
+import ProductDetails from './components/Products/ProductDetails';
 
 const AppLayout = () => {
     return (
@@ -40,13 +39,16 @@ const AppLayout = () => {
           element: <ProductGrid />,
         },
         {
+          path: "product/:productId",
+          element: <ProductDetails />,
+        },
+        {
           path: "contact",
           element: <Contact />,
         },
       ],
     },
   ]);
-
 
   const Router = () => {    
     return <RouterProvider router={router} />;

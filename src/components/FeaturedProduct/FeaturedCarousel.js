@@ -44,11 +44,11 @@ const FeaturedCarousel = () => {
         <div className="featured-image">
           <img 
             src="/WhatsApp Image 2025-01-25 at 7.50.21 PM (2).jpeg" 
-            alt="Crystal Candle Holder" 
+            alt="Crystal Owl" 
           />
         </div>
         <div className="featured-info">
-          <h2>Crystal Candle Holder</h2>
+          <h2>Crystal Owl</h2>
           <div className="price-tag">
             <span className="original-price">₹850</span>
             <span className="sale-price">₹299</span>
