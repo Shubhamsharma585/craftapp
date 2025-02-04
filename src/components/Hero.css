@@ -1,12 +1,16 @@
 .hero {
   position: relative;
-  min-height: 100vh;
+  height: 80vh;
+  min-height: 500px;
+  max-height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
-  color: white;
+  background: 
+    linear-gradient(120deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.85)),
+    url('https://images.unsplash.com/photo-1604762512526-b7ce326d9b38?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  color: #2c3e50;
   overflow: hidden;
 }
 
@@ -18,8 +22,9 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+    url('https://images.unsplash.com/photo-1620803366004-119b57f54cd6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+  opacity: 0.15;
+  mix-blend-mode: multiply;
   pointer-events: none;
 }
 
@@ -29,37 +34,77 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.1) 100%);
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.4) 0%, 
+    rgba(255, 255, 255, 0.2) 50%,
+    rgba(255, 255, 255, 0.4) 100%);
   z-index: 1;
 }
 
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  padding: 2rem;
+  max-width: 1000px;
+  padding: 3.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(8px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 2px 8px rgba(255, 255, 255, 0.2);
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-text {
+  margin-bottom: 1rem;
 }
 
 .hero-content h1 {
   font-size: 4.5rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 1.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  letter-spacing: 2px;
+  letter-spacing: 3px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: none;
+  animation: titleFloat 5s ease-in-out infinite;
+}
+
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
 .hero-content p {
   font-size: 1.4rem;
-  max-width: 600px;
-  margin: 0 auto 3rem;
+  max-width: 700px;
+  margin: 0 auto;
   line-height: 1.6;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  color: #34495e;
+  text-shadow: none;
 }
 
 .hero-cta {
   display: flex;
   gap: 1.5rem;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .cta-button {
@@ -69,23 +114,37 @@
   border: none;
   border-radius: 50px;
   cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .cta-button.primary {
-  background: #ffffff;
-  color: #1a1a1a;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(44, 62, 80, 0.3);
+  border: none;
 }
 
 .cta-button.secondary {
   background: transparent;
-  color: #ffffff;
-  border: 2px solid #ffffff;
+  color: #2c3e50;
+  border: 2px solid #2c3e50;
+  backdrop-filter: blur(5px);
 }
 
 .cta-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px) scale(1.05);
+}
+
+.cta-button.primary:hover {
+  background: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+  box-shadow: 0 6px 20px rgba(44, 62, 80, 0.4);
+}
+
+.cta-button.secondary:hover {
+  background: rgba(44, 62, 80, 0.1);
+  border-color: #34495e;
 }
 
 .hero-contact-info {
@@ -150,12 +209,24 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+    min-height: 450px;
+  }
+
+  .hero-content {
+    margin: 1.5rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
   .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
   }
 
   .hero-content p {
     font-size: 1.1rem;
+    padding: 0 0.5rem;
   }
 
   .hero-cta {
@@ -164,7 +235,10 @@
   }
 
   .cta-button {
+    padding: 0.9rem 2rem;
     width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .hero-contact-info {

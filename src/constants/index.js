@@ -34,9 +34,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviews: getRandomReviews(10),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '15 x 10 x 8 cm',
-      weight: '450g',
+      material: 'Polyster Resin',
       packaging: 'Premium Gift Box'
     },
     stock: 15,
@@ -64,9 +62,7 @@ export const PRODUCTS = [
     rating: 4.8,
     reviews: getRandomReviews(12),
     specifications: {
-      material: 'Premium Crystal',
-      dimensions: '20 x 12 x 10 cm',
-      weight: '600g',
+      material: 'Polyster Resin',
       packaging: 'Velvet-lined Box'
     },
     stock: 8,
@@ -92,9 +88,7 @@ export const PRODUCTS = [
     rating: 4.9,
     reviews: getRandomReviews(15),
     specifications: {
-      material: 'Pure Crystal',
-      dimensions: '18 x 12 x 8 cm',
-      weight: '500g',
+      material: 'Polyster Resin',
       packaging: 'Premium Box with Cushioning'
     },
     stock: 20,
@@ -121,9 +115,7 @@ export const PRODUCTS = [
     rating: 4.7,
     reviews: getRandomReviews(8),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '25 x 15 x 5 cm',
-      weight: '400g',
+      material: 'Polyster Resin',
       packaging: 'Premium Gift Box'
     },
     stock: 12,
@@ -150,9 +142,7 @@ export const PRODUCTS = [
     rating: 4.6,
     reviews: getRandomReviews(9),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '18 x 12 x 8 cm',
-      weight: '350g',
+      material: 'Polyster Resin',
       packaging: 'Protective Box'
     },
     stock: 18,
@@ -179,9 +169,7 @@ export const PRODUCTS = [
     rating: 4.8,
     reviews: getRandomReviews(14),
     specifications: {
-      material: 'Premium Crystal',
-      dimensions: '22 x 15 x 10 cm',
-      weight: '550g',
+      material: 'Polyster Resin',
       packaging: 'Luxury Gift Box'
     },
     stock: 10,
@@ -208,9 +196,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviews: getRandomReviews(11),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '20 x 15 x 8 cm',
-      weight: '480g',
+      material: 'Polyster Resin',
       packaging: 'Premium Box'
     },
     stock: 15,
@@ -237,9 +223,7 @@ export const PRODUCTS = [
     rating: 4.7,
     reviews: getRandomReviews(13),
     specifications: {
-      material: 'Black Crystal Glass',
-      dimensions: '20 x 15 x 8 cm',
-      weight: '480g',
+      material: 'Polyster Resin',
       packaging: 'Premium Box'
     },
     stock: 12,
@@ -267,9 +251,7 @@ export const PRODUCTS = [
     rating: 4.9,
     reviews: getRandomReviews(16),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '25 x 15 x 10 cm',
-      weight: '600g',
+      material: 'Polyster Resin',
       packaging: 'Luxury Gift Box'
     },
     stock: 8,
@@ -296,9 +278,7 @@ export const PRODUCTS = [
     rating: 4.8,
     reviews: getRandomReviews(12),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '25 x 15 x 10 cm',
-      weight: '600g',
+      material: 'Polyster Resin',
       packaging: 'Premium Gift Box'
     },
     stock: 10,
@@ -325,9 +305,7 @@ export const PRODUCTS = [
     rating: 4.6,
     reviews: getRandomReviews(9),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '15 x 12 x 8 cm',
-      weight: '350g',
+      material: 'Polyster Resin',
       packaging: 'Protective Box'
     },
     stock: 20,
@@ -355,9 +333,7 @@ export const PRODUCTS = [
     rating: 4.7,
     reviews: getRandomReviews(15),
     specifications: {
-      material: 'Gold-plated Crystal',
-      dimensions: '20 x 15 x 10 cm',
-      weight: '500g',
+      material: 'Polyster Resin',
       packaging: 'Luxury Gift Box'
     },
     stock: 8,
@@ -384,9 +360,7 @@ export const PRODUCTS = [
     rating: 4.8,
     reviews: getRandomReviews(14),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '25 x 18 x 12 cm',
-      weight: '750g',
+      material: 'Polyster Resin',
       packaging: 'Premium Gift Box'
     },
     stock: 6,
@@ -413,9 +387,7 @@ export const PRODUCTS = [
     rating: 4.6,
     reviews: getRandomReviews(10),
     specifications: {
-      material: 'White Crystal Glass',
-      dimensions: '20 x 15 x 10 cm',
-      weight: '500g',
+      material: 'Polyster Resin',
       packaging: 'Premium Box'
     },
     stock: 15,
@@ -442,9 +414,7 @@ export const PRODUCTS = [
     rating: 4.9,
     reviews: getRandomReviews(18),
     specifications: {
-      material: 'Blue Crystal Glass',
-      dimensions: '25 x 18 x 12 cm',
-      weight: '750g',
+      material: 'Polyster Resin',
       packaging: 'Luxury Gift Box'
     },
     stock: 5,
@@ -471,9 +441,7 @@ export const PRODUCTS = [
     rating: 4.9,
     reviews: getRandomReviews(16),
     specifications: {
-      material: 'Blue Crystal Glass',
-      dimensions: '25 x 18 x 12 cm',
-      weight: '750g',
+      material: 'Polyster Resin',
       packaging: 'Luxury Gift Box'
     },
     stock: 5,
@@ -500,9 +468,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviews: getRandomReviews(8),
     specifications: {
-      material: 'Blue Crystal Glass',
-      dimensions: '15 x 12 x 8 cm',
-      weight: '350g',
+      material: 'Polyster Resin',
       packaging: 'Protective Box'
     },
     stock: 25,
@@ -529,9 +495,7 @@ export const PRODUCTS = [
     rating: 4.5,
     reviews: getRandomReviews(9),
     specifications: {
-      material: 'Blue Crystal Glass',
-      dimensions: '15 x 12 x 8 cm',
-      weight: '350g',
+      material: 'Polyster Resin',
       packaging: 'Protective Box'
     },
     stock: 20,
@@ -558,9 +522,7 @@ export const PRODUCTS = [
     rating: 4.7,
     reviews: getRandomReviews(11),
     specifications: {
-      material: 'Gold-plated Crystal',
-      dimensions: '22 x 15 x 8 cm',
-      weight: '450g',
+      material: 'Polyster Resin',
       packaging: 'Premium Box'
     },
     stock: 12,
@@ -587,9 +549,7 @@ export const PRODUCTS = [
     rating: 4.7,
     reviews: getRandomReviews(13),
     specifications: {
-      material: 'Gold-plated Crystal',
-      dimensions: '22 x 15 x 8 cm',
-      weight: '450g',
+      material: 'Polyster Resin',
       packaging: 'Premium Box'
     },
     stock: 10,
@@ -616,9 +576,7 @@ export const PRODUCTS = [
     rating: 4.4,
     reviews: getRandomReviews(7),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '12 x 8 x 8 cm',
-      weight: '250g',
+      material: 'Polyster Resin',
       packaging: 'Protective Box'
     },
     stock: 30,
@@ -645,9 +603,7 @@ export const PRODUCTS = [
     rating: 4.6,
     reviews: getRandomReviews(10),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '30 x 15 x 5 cm',
-      weight: '400g',
+      material: 'Polyster Resin',
       packaging: 'Premium Box'
     },
     stock: 15,
@@ -674,9 +630,7 @@ export const PRODUCTS = [
     rating: 4.6,
     reviews: getRandomReviews(9),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '30 x 15 x 5 cm',
-      weight: '400g',
+      material: 'Polyster Resin',
       packaging: 'Premium Box'
     },
     stock: 18,
@@ -703,9 +657,7 @@ export const PRODUCTS = [
     rating: 4.8,
     reviews: getRandomReviews(12),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '25 x 15 x 5 cm',
-      weight: '350g',
+      material: 'Polyster Resin',
       packaging: 'Premium Gift Box'
     },
     stock: 10,
@@ -732,9 +684,7 @@ export const PRODUCTS = [
     rating: 4.9,
     reviews: getRandomReviews(15),
     specifications: {
-      material: 'Crystal Glass',
-      dimensions: '35 x 20 x 5 cm',
-      weight: '600g',
+      material: 'Polyster Resin',
       packaging: 'Luxury Gift Box'
     },
     stock: 8,
@@ -761,9 +711,7 @@ export const PRODUCTS = [
     rating: 4.7,
     reviews: getRandomReviews(14),
     specifications: {
-      material: 'Crystal Glass with Epoxy',
-      dimensions: '20 x 20 x 25 cm',
-      weight: '800g',
+      material: 'Polyster Resin',
       packaging: 'Premium Gift Box'
     },
     stock: 12,

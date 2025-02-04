@@ -1,33 +1,19 @@
 import React from 'react';
-import { redirect } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import './Hero.css';
 
 const Hero = () => {
-
-  const handleRedirect = (path) => {
-    redirect(path);
-  };
+  const navigate = useNavigate();
 
   return (
     <header className="hero">
       <div className="hero-overlay"></div>
       <div className="hero-content">
-        <h1>The Crystal Craft</h1>
-        <p>Transform your space with our exquisite crystal decorative pieces</p>
-        <div className="hero-cta">
-          <button 
-            className="cta-button primary" 
-            onClick={() => handleRedirect('/products')}
-          >
-            Explore Collection
-          </button>
-          <button 
-            className="cta-button secondary"
-            onClick={() => handleRedirect('/about')}
-          >
-            Learn More
-          </button>
+        <div className="hero-text">
+          <h1>Crystal Craft</h1>
+          <p>Discover our handcrafted resin masterpieces that blend art with functionality. Each piece tells a unique story through mesmerizing colors and organic patterns.</p>
         </div>
+        
       </div>
     </header>
   );

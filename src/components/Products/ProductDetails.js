@@ -177,7 +177,7 @@ const ProductDetails = () => {
             </div>
             <button 
               className="place-order-btn" 
-              onClick={() => setShowReferenceModal(true)}
+              onClick={() => setShowOrderModal(true)}
             >
               Place Order
             </button>
@@ -199,22 +199,12 @@ const ProductDetails = () => {
               <div className="spec-label">Theme</div>
               <div className="spec-value">Nature</div>
             </div>
-            <div className="spec-row">
-              <div className="spec-label">Brand</div>
-              <div className="spec-value">{product.brand}</div>
-            </div>
+            
             <div className="spec-row">
               <div className="spec-label">Material</div>
               <div className="spec-value">{product.specifications.material}</div>
             </div>
-            <div className="spec-row">
-              <div className="spec-label">Dimensions</div>
-              <div className="spec-value">{product.specifications.dimensions}</div>
-            </div>
-            <div className="spec-row">
-              <div className="spec-label">Weight</div>
-              <div className="spec-value">{product.specifications.weight}</div>
-            </div>
+          
             <div className="spec-row">
               <div className="spec-label">Packaging</div>
               <div className="spec-value">{product.specifications.packaging}</div>
@@ -331,65 +321,112 @@ const ProductDetails = () => {
       {showOrderModal && (
         <div className="modal-overlay">
           <div className="modal-content">
-            <h3>Order Details</h3>
-            <form onSubmit={handleOrderSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">Name:</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={orderDetails.name}
-                  onChange={handleOrderDetailsChange}
-                  placeholder="Enter your name"
-                  required
-                />
+            <div className="modal-header">
+              <h3>Complete Your Order</h3>
+              <button className="close-btn" onClick={() => setShowOrderModal(false)}>&times;</button>
+            </div>
+            
+
+            <form onSubmit={handleOrderSubmit} className="order-form">
+              <div className="form-grid">
+                <div className="form-group">
+                  <label htmlFor="name">
+                    <span className="label-text">Name</span>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={orderDetails.name}
+                      onChange={handleOrderDetailsChange}
+                      placeholder="Enter your full name"
+                      required
+                    />
+                  </label>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="mobile">
+                    <span className="label-text">Mobile Number</span>
+                    <input
+                      type="tel"
+                      id="mobile"
+                      name="mobile"
+                      value={orderDetails.mobile}
+                      onChange={handleOrderDetailsChange}
+                      placeholder="Your contact number"
+                      required
+                    />
+                  </label>
+                </div>
               </div>
+
               <div className="form-group">
-                <label htmlFor="mobile">Mobile Number:</label>
-                <input
-                  type="tel"
-                  id="mobile"
-                  name="mobile"
-                  value={orderDetails.mobile}
-                  onChange={handleOrderDetailsChange}
-                  placeholder="Enter your mobile number"
-                  required
-                />
+                <label htmlFor="address">
+                  <span className="label-text">Delivery Address</span>
+                  <textarea
+                    id="address"
+                    name="address"
+                    value={orderDetails.address}
+                    onChange={handleOrderDetailsChange}
+                    placeholder="Enter your complete delivery address"
+                    required
+                    rows="2"
+                  ></textarea>
+                </label>
               </div>
-              <div className="form-group">
-                <label htmlFor="address">Address:</label>
-                <textarea
-                  id="address"
-                  name="address"
-                  value={orderDetails.address}
-                  onChange={handleOrderDetailsChange}
-                  placeholder="Enter your address"
-                  required
-                  rows="3"
-                ></textarea>
+
+              <div className="form-grid">
+                <div className="form-group">
+                  <label htmlFor="quantity">
+                    <span className="label-text">Quantity</span>
+                    <input
+                      type="number"
+                      id="quantity"
+                      name="quantity"
+                      value={orderDetails.quantity}
+                      onChange={handleOrderDetailsChange}
+                      min="1"
+                      required
+                    />
+                  </label>
+                </div>
+
+                <div className="form-group">
+                  <label htmlFor="referenceCode">
+                    <span className="label-text">Reference Code <span className="optional">(Optional)</span></span>
+                    <input
+                      type="text"
+                      id="referenceCode"
+                      name="referenceCode"
+                      value={orderDetails.referenceCode}
+                      onChange={handleOrderDetailsChange}
+                      placeholder="Have a reference code?"
+                    />
+                  </label>
+                </div>
               </div>
-              <div className="form-group">
-                <label htmlFor="quantity">Number of Pieces:</label>
-                <input
-                  type="number"
-                  id="quantity"
-                  name="quantity"
-                  value={orderDetails.quantity}
-                  onChange={handleOrderDetailsChange}
-                  min="1"
-                  required
-                />
-              </div>
+
               <div className="order-summary">
-                <p>Total Amount: ₹{(product.price * orderDetails.quantity).toLocaleString('en-IN')}</p>
+                <div className="summary-row">
+                  <span className="summary-label">Price per item</span>
+                  <span className="summary-value">₹{product.price.toLocaleString('en-IN')}</span>
+                </div>
+                <div className="summary-row total">
+                  <span className="summary-label">Total Amount</span>
+                  <span className="summary-value">₹{(product.price * orderDetails.quantity).toLocaleString('en-IN')}</span>
+                </div>
               </div>
+
               <div className="modal-actions">
-                <button type="button" onClick={() => setShowOrderModal(false)}>
-                  Cancel
-                </button>
-                <button type="submit" disabled={loading}>
-                  {loading ? 'Placing Order...' : 'Place Order'}
+                <button type="submit" className="submit-btn" disabled={loading}>
+                  {loading ? (
+                    <span className="loading-text">
+                      <span className="loader"></span>
+                      Processing...
+                    </span>
+                  ) : (
+                    'Place Order'
+                  )}
                 </button>
               </div>
             </form>
