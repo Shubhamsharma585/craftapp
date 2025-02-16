@@ -1,17 +1,31 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PRODUCTS } from '../../constants';
 import './ProductGrid.css';
 import CategoryFilter from './CategoryFilter';
 import { StarFill, StarHalf, Star } from 'react-bootstrap-icons';
+import { handleRouteCategory } from '../../constants/index';
+
 
 const ProductGrid = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const navigate = useNavigate();
+  const urlParams = new URLSearchParams(window.location.search);
+  const category = urlParams.get('category');
 
   const filteredItems = selectedCategory === 'All' 
     ? PRODUCTS 
     : PRODUCTS.filter(item => item.category === selectedCategory);
+
+
+
+
+
+  useEffect(() => {
+    if (category) {
+      setSelectedCategory(handleRouteCategory(category));
+    }
+  }, [category]); 
 
   const handleProductClick = (productId) => {
     navigate(`/product/${productId}`);

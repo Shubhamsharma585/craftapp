@@ -7,12 +7,15 @@ import Contact from './components/Contact';
 import Home from './Home';
 import ProductGrid from './components/Products/ProductGrid';
 import ProductDetails from './components/Products/ProductDetails';
+import Footer from './Footer';
+
 
 const AppLayout = () => {
     return (
       <div className="App">
         <NavBar />
         <Outlet />
+        <Footer />
       </div>
     );
   };

@@ -13,6 +13,20 @@ export const CATEGORIES = [
   'Gods & Goddesses',
 ];
 
+
+export const handleRouteCategory = (category) => {
+  switch (category) {
+    case 'table-decor':
+      return 'Table Decor';
+    case 'wall-decor':
+      return 'Wall Decor';
+    case 'gods-and-goddesses':
+      return 'Gods & Goddesses';
+    default:
+      return category;
+  }
+} 
+
 export const formatPrice = (price) => {
   return `₹${price.toLocaleString('en-IN')}`;
 };
@@ -84,7 +98,7 @@ export const PRODUCTS = [
       '/WhatsApp Image 2025-01-21 at 9.59.20 PM (4).jpeg',
     ],
     description: 'Lord Ganesha idol representing wisdom and new beginnings',
-    category: 'Wall Decor',
+    category: 'Gods & Goddesses',
     rating: 4.9,
     reviews: getRandomReviews(15),
     specifications: {
@@ -111,7 +125,7 @@ export const PRODUCTS = [
       '/WhatsApp Image 2025-01-21 at 9.59.20 PM (3).jpeg'
     ],
     description: 'Artistic Ganesha mounted on a divine leaf design',
-    category: 'Wall Decor',
+    category: 'Gods & Goddesses',
     rating: 4.7,
     reviews: getRandomReviews(8),
     specifications: {
@@ -243,7 +257,7 @@ export const PRODUCTS = [
     image: '/WhatsApp Image 2025-01-21 at 9.58.46 PM (8).jpeg',
     images: [
       '/WhatsApp Image 2025-01-21 at 9.58.46 PM (8).jpeg',
-      '/WhatsApp Image 2025-01-21 at 9.58.46 PM (8).jpeg',
+      '/WhatsApp Image 2025-01-21 at 9.58.46 PM (7).jpeg',
       '/WhatsApp Image 2025-01-21 at 9.58.46 PM (8).jpeg'
     ],
     description: 'Romantic pair of doves symbolizing love and partnership',
@@ -260,33 +274,6 @@ export const PRODUCTS = [
       'Premium crystal quality',
       'Symbol of love',
       'Gift-ready packaging'
-    ]
-  },
-  {
-    id: 1011,
-    name: 'Crystal Dove Pair',
-    price: 899,
-    displayPrice: '₹899',
-    image: '/WhatsApp Image 2025-01-21 at 9.58.46 PM (7).jpeg',
-    images: [
-      '/WhatsApp Image 2025-01-21 at 9.58.46 PM (7).jpeg',
-      '/WhatsApp Image 2025-01-21 at 9.58.46 PM (7).jpeg',
-      '/WhatsApp Image 2025-01-21 at 9.58.46 PM (7).jpeg'
-    ],
-    description: 'Beautiful dove couple representing peace and harmony',
-    category: 'Table Decor',
-    rating: 4.8,
-    reviews: getRandomReviews(12),
-    specifications: {
-      material: 'Polyster Resin',
-      packaging: 'Premium Gift Box'
-    },
-    stock: 10,
-    features: [
-      'Paired design',
-      'High-quality crystal',
-      'Symbol of harmony',
-      'Elegant packaging'
     ]
   },
   {
@@ -572,7 +559,7 @@ export const PRODUCTS = [
       '/WhatsApp Image 2025-01-25 at 7.50.20 PM (1).jpeg'
     ],
     description: 'Serene Buddha-themed decorative bottle for spiritual ambiance',
-    category: 'Table Decor',
+    category: 'Gods & Goddesses',
     rating: 4.4,
     reviews: getRandomReviews(7),
     specifications: {
@@ -588,33 +575,6 @@ export const PRODUCTS = [
     ]
   },
   {
-    id: 1024,
-    name: 'Crystal Hanging Plant',
-    price: 499,
-    displayPrice: '₹499',
-    image: '/WhatsApp Image 2025-01-25 at 7.50.20 PM.jpeg',
-    images: [
-      '/WhatsApp Image 2025-01-25 at 7.50.20 PM.jpeg',
-      '/WhatsApp Image 2025-01-25 at 7.50.20 PM.jpeg',
-      '/WhatsApp Image 2025-01-25 at 7.50.20 PM.jpeg'
-    ],
-    description: 'Elegant hanging botanical design for natural aesthetics',
-    category: 'Wall Decor',
-    rating: 4.6,
-    reviews: getRandomReviews(10),
-    specifications: {
-      material: 'Polyster Resin',
-      packaging: 'Premium Box'
-    },
-    stock: 15,
-    features: [
-      'Botanical design',
-      'Wall-mounting ready',
-      'Crystal clear finish',
-      'Protected packaging'
-    ]
-  },
-  {
     id: 1025,
     name: 'Crystal Hanging Plant',
     price: 499,
@@ -622,7 +582,7 @@ export const PRODUCTS = [
     image: '/WhatsApp Image 2025-01-25 at 7.50.19 PM (2).jpeg',
     images: [
       '/WhatsApp Image 2025-01-25 at 7.50.19 PM (2).jpeg',
-      '/WhatsApp Image 2025-01-25 at 7.50.19 PM (2).jpeg',
+      '/WhatsApp Image 2025-01-25 at 7.50.20 PM.jpeg',
       '/WhatsApp Image 2025-01-25 at 7.50.19 PM (2).jpeg'
     ],
     description: 'Beautiful suspended plant design for nature-inspired decor',

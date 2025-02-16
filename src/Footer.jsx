@@ -1,7 +1,9 @@
 import React from 'react'
 import './Footer.css';
+import { Link } from 'react-router-dom';
 
 function Footer() {
+
   return (
     <footer>
       <div className="footer-content">
@@ -13,17 +15,17 @@ function Footer() {
           <div className="footer-section">
             <h4>Quick Links</h4>
             <ul>
-            <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
+              <li><Link to="/" style={{ color: 'inherit', textDecoration: 'inherit' }}>Home</Link></li>
+              <li><Link to="/about" style={{ color: 'inherit', textDecoration: 'inherit' }}>About</Link></li>
+              <li><Link to="/contact" style={{ color: 'inherit', textDecoration: 'inherit' }}>Contact</Link></li>
             </ul>
           </div>
           <div className="footer-section">
             <h4>Categories</h4>
             <ul>
-              <li>Corporate Gifts</li>
-              <li>Table Decor</li>
-              <li>Wall Decor</li>
+              <li><Link to="/products?category=table-decor" style={{ color: 'inherit', textDecoration: 'inherit' }}>Table Decor</Link></li>
+              <li><Link to="/products?category=wall-decor" style={{ color: 'inherit', textDecoration: 'inherit' }}>Wall Decor</Link></li>
+              <li><Link to="/products?category=gods-and-goddesses" style={{ color: 'inherit', textDecoration: 'inherit' }}>Gods & Goddesses</Link></li>
             </ul>
           </div>
           <div className="footer-section">
