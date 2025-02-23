@@ -10,6 +10,20 @@ function Footer() {
         <div className="footer-brand">
           <h3>The Crystal Craft</h3>
           <p>Elevating spaces with timeless crystal decor</p>
+          <div className="social-links">
+            <a 
+              href="https://www.instagram.com/cystalcraft.in?igsh=cm1uNWw2MGw1d2Vl&utm_source=qr"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="social-link"
+            >
+              <img 
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/132px-Instagram_logo_2016.svg.png"
+                alt="Instagram"
+                className="social-icon"
+              />
+            </a>
+          </div>
         </div>
         <div className="footer-links">
           <div className="footer-section">

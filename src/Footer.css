@@ -74,6 +74,28 @@ footer {
   text-decoration: underline;
 }
 
+.social-links {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover .social-icon {
+  transform: scale(1.1);
+}
+
 /* Mobile Responsive Design */
 @media (max-width: 1024px) {
   .footer-content {
@@ -120,6 +142,10 @@ footer {
   .footer-section ul li {
     font-size: 0.9rem;
     margin-bottom: 0.6rem;
+  }
+
+  .social-links {
+    justify-content: center;
   }
 }
 

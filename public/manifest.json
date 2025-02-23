@@ -1,6 +1,6 @@
 {
-  "short_name": "CraftApp",
-  "name": "CraftApp - Handcrafted Products",
+  "short_name": "Crystal Craft",
+  "name": "Crystal Craft - Handcrafted Resin Masterpieces",
   "icons": [
     {
       "src": "favicon.ico",
@@ -8,26 +8,18 @@
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "android-chrome-192x192.png",
       "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
+      "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "android-chrome-512x512.png",
       "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "apple-touch-icon.png",
-      "type": "image/png",
-      "sizes": "180x180"
+      "sizes": "512x512"
     }
   ],
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#2c3e50",
-  "background_color": "#ffffff",
-  "orientation": "portrait"
+  "background_color": "#ffffff"
 }
